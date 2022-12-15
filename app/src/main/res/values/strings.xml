@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Exam</string>
+
+    // Splash
+    <string name="idSplashText">Splash Text</string>
+
+    // SignIn
+    <string name="idTextSignIn">Pagina de autentificare</string>
+    <string name="buttonProf">Proful</string>
+    <string name="buttonElev">Elevul</string>
+    <string name="contentDescriptionSignIn">Aici este poza pentru pagina de SignIn</string>
+
+    // Main
+    <string name="idTextMainPage">Welcome to the main page</string>
+
+</resources>
