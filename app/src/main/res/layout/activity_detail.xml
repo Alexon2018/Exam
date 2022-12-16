@@ -7,13 +7,100 @@
     tools:context=".DetailActivity">
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:id="@+id/id1Q"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Detail Activity page"
-        android:textSize = "24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="20dp"
+        android:ellipsize="end"
+        android:fontFamily="serif"
+        android:text="Aici vine intrebarea cu multe optiuni"
+        android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/idCat"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Categoria"
+        app:layout_constraintEnd_toStartOf="@+id/idDate"
+        app:layout_constraintStart_toStartOf="@+id/id1Q"
+        app:layout_constraintTop_toBottomOf="@+id/id1Q" />
+
+    <TextView
+        android:id="@+id/idDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idCat" />
+
+
+    <TextView
+        android:id="@+id/idR1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:ellipsize="end"
+        android:text="Raspuns 1"
+        app:layout_constraintEnd_toStartOf="@+id/idB1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idCat" />
+
+    <Switch
+        android:id="@+id/idB1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/idR1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idR1" />
+
+    <TextView
+        android:id="@+id/idR2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:ellipsize="end"
+        android:text="Raspuns 2"
+        app:layout_constraintEnd_toStartOf="@+id/idB1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idR1" />
+
+    <Switch
+        android:id="@+id/idB2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/idR2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idR2" />
+
+    <TextView
+        android:id="@+id/idR3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="24dp"
+        android:ellipsize="end"
+        android:text="Raspuns 3"
+        app:layout_constraintEnd_toStartOf="@+id/idB1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idR2" />
+
+    <Switch
+        android:id="@+id/idB3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/idR3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/idR3" />
 </androidx.constraintlayout.widget.ConstraintLayout>

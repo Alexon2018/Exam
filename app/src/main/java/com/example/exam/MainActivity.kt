@@ -20,16 +20,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+//mock data
         filteredArray.clear()
         var temp = MyItem(
-            "Care este ordinea?",
-            Response("A", true),
-            Response("B", false),
-            Response("C", false),
+            "Care vehicul va trece ultimul prin intersectie?",
+            Response("Tramvaiul", false),
+            Response("Ambulanta cu semnalalele luminoase si sonore pornite", false),
+            Response("BMW-ul cu numere de Bulgaria", true),
             "Categoria intai",
             "23-12-2022"
         )
         filteredArray+=temp
+//end of mock data
 
         binding.rv.layoutManager = LinearLayoutManager(this)
         binding.rv.adapter= MyAdapter(filteredArray)
