@@ -1,7 +1,6 @@
 package com.example.exam.utils
 
 import android.content.Intent
-import android.provider.MediaStore.Audio.AudioColumns.TITLE_KEY
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -13,7 +12,7 @@ import com.example.exam.R
 class MyAdapter (val data : List<Int>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     class MyViewHolder(val row : View)  : RecyclerView.ViewHolder(row){
-        val textView = row.findViewById<TextView>(R.id.number)
+        val textView = row.findViewById<TextView>(R.id.idTaskName)
 
         companion object{
             const val KEY_ONE = "aici punem o variabila"
