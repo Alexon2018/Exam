@@ -8,5 +8,5 @@ data class MyItem(
     var response2   : Response,
     var response3   : Response,
     var category    : String,
-    var currentDate : Date
+    var currentDate : String
 )

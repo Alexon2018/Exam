@@ -16,7 +16,7 @@
 
 
         <TextView
-            android:id="@+id/idTaskName"
+            android:id="@+id/idQuestion"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
@@ -41,8 +41,8 @@
             android:text="Categoria"
             android:textColor="@color/colorAccent"
             android:textSize="18sp"
-            app:layout_constraintStart_toStartOf="@+id/idTaskName"
-            app:layout_constraintTop_toBottomOf="@+id/idTaskName" />
+            app:layout_constraintStart_toStartOf="@+id/idQuestion"
+            app:layout_constraintTop_toBottomOf="@+id/idQuestion" />
 
         <TextView
             android:id="@+id/idDate"

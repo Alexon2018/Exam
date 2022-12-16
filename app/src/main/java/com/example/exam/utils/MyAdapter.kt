@@ -8,21 +8,27 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exam.DetailActivity
 import com.example.exam.R
+import com.example.exam.dataclasses.MyItem
 
-class MyAdapter (val data : List<Int>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private val myList: List<MyItem>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-    class MyViewHolder(val row : View)  : RecyclerView.ViewHolder(row){
-        val textView = row.findViewById<TextView>(R.id.idTaskName)
+    class MyViewHolder(itemView : View, var topic : MyItem? = null)  : RecyclerView.ViewHolder(itemView){
+
+        val tvQuestion = itemView.findViewById<TextView>(R.id.idQuestion)
+        val tvCategoria = itemView.findViewById<TextView>(R.id.idCategoria)
+        val tvDate = itemView.findViewById<TextView>(R.id.idDate)
+        val tvCheck = itemView.findViewById<TextView>(R.id.idNumber)
+
 
         companion object{
             const val KEY_ONE = "aici punem o variabila"
         }
 
         init{
-            row.setOnClickListener {
-                val intent = Intent(row.context, DetailActivity::class.java)
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, DetailActivity::class.java)
                 intent.putExtra(KEY_ONE, "abc")
-                row.context.startActivity(intent)
+                itemView.context.startActivity(intent)
 
             }
         }
@@ -35,9 +41,16 @@ class MyAdapter (val data : List<Int>) : RecyclerView.Adapter<MyAdapter.MyViewHo
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        holder.textView.text = data[position].toString()
+
+        val currentItem = myList[position]
+
+        holder.tvQuestion.text  = currentItem.question
+        holder.tvCategoria.text = currentItem.category
+        holder.tvDate.text      = currentItem.currentDate
+
+//        holder.textView.text = data[position].toString()
     }
 
-    override fun getItemCount(): Int = data.size
+    override fun getItemCount(): Int = myList.size
 }
 
