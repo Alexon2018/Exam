@@ -33,14 +33,14 @@ class MainActivity : AppCompatActivity() {
         filteredArray+=temp
 //end of mock data
 
-        binding.rv.layoutManager = LinearLayoutManager(this)
-        binding.rv.adapter= MyAdapter(filteredArray)
-        binding.rv.hasFixedSize()
-
-        binding.fab.setOnClickListener {
-            val intent = Intent(this, DetailActivity::class.java)
-            startActivity(intent)
-        }
+//        binding.rv.layoutManager = LinearLayoutManager(this)
+//        binding.rv.adapter= MyAdapter(filteredArray)
+//        binding.rv.hasFixedSize()
+//
+//        binding.fab.setOnClickListener {
+//            val intent = Intent(this, DetailActivity::class.java)
+//            startActivity(intent)
+//        }
 
     }
 }
