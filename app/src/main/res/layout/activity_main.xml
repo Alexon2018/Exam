@@ -33,13 +33,6 @@
             <!--        app:layout_constraintEnd_toEndOf="parent"-->
             <!--        app:maxImageSize="36dp" />-->
 
-            <!--    <androidx.recyclerview.widget.RecyclerView-->
-            <!--        android:id="@+id/rv"-->
-            <!--        android:layout_width="match_parent"-->
-            <!--        android:layout_height="match_parent"-->
-
-            <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
         </LinearLayout>
         <com.google.android.material.navigation.NavigationView
             android:id="@+id/navView"

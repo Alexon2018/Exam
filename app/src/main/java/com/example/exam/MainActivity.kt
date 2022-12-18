@@ -27,36 +27,12 @@ class MainActivity : AppCompatActivity() {
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController, drawerLayout)
         NavigationUI.setupWithNavController(binding.navView, navController)
-
-////mock data
-//        filteredArray.clear()
-//        var temp = MyItem(
-//            "Care vehicul va trece ultimul prin intersectie?",
-//            Response("Tramvaiul", false),
-//            Response("Ambulanta cu semnalalele luminoase si sonore pornite", false),
-//            Response("BMW-ul cu numere de Bulgaria", true),
-//            "Categoria intai",
-//            "23-12-2022"
-//        )
-//        filteredArray+=temp
-////end of mock data
-
-//        binding.rv.layoutManager = LinearLayoutManager(this)
-//        binding.rv.adapter= MyAdapter(filteredArray)
-//        binding.rv.hasFixedSize()
-//
-//        binding.fab.setOnClickListener {
-//            val intent = Intent(this, DetailActivity::class.java)
-//            startActivity(intent)
-//        }
-
     }
 
-    //tot pentru UP button
+//tot pentru UP button
     override fun onSupportNavigateUp(): Boolean {
         val navController = this.findNavController(R.id.myNavHostFragment)
         return NavigationUI.navigateUp(navController, drawerLayout)
     }
-
 
 }

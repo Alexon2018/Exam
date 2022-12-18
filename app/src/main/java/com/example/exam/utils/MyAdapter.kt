@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exam.DetailActivity
 import com.example.exam.R
@@ -33,23 +34,26 @@ class MyAdapter(private val myList: List<MyItem>) : RecyclerView.Adapter<MyAdapt
 
         init{
             itemView.setOnClickListener {
-                val intent = Intent(itemView.context, DetailActivity::class.java)
-                intent.putExtra(KEY_Question,   topic?.question)
-                intent.putExtra(KEY_Category,   topic?.category)
-                intent.putExtra(KEY_Date,       topic?.currentDate)
-                intent.putExtra(KEY_R1,         topic?.response1?.response)
-                intent.putExtra(KEY_R1_bool,    topic?.response1?.valid)
-                intent.putExtra(KEY_R2,         topic?.response2?.response)
-                intent.putExtra(KEY_R2_bool,    topic?.response2?.valid)
-                intent.putExtra(KEY_R3,         topic?.response3?.response)
-                intent.putExtra(KEY_R3_bool,    topic?.response3?.valid)
-                itemView.context.startActivity(intent)
+                 view : View ->
+                    view.findNavController().navigate(R.id.action_rvFragment_to_detailsFragment)
+
+//                val intent = Intent(itemView.context, DetailActivity::class.java)
+//                intent.putExtra(KEY_Question,   topic?.question)
+//                intent.putExtra(KEY_Category,   topic?.category)
+//                intent.putExtra(KEY_Date,       topic?.currentDate)
+//                intent.putExtra(KEY_R1,         topic?.response1?.response)
+//                intent.putExtra(KEY_R1_bool,    topic?.response1?.valid)
+//                intent.putExtra(KEY_R2,         topic?.response2?.response)
+//                intent.putExtra(KEY_R2_bool,    topic?.response2?.valid)
+//                intent.putExtra(KEY_R3,         topic?.response3?.response)
+//                intent.putExtra(KEY_R3_bool,    topic?.response3?.valid)
+//                itemView.context.startActivity(intent)
             }
         }
 
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyAdapter.MyViewHolder {
         val layout = LayoutInflater.from(parent.context).inflate(R.layout.item_view, parent, false)
         return MyViewHolder(layout)
     }
