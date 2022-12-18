@@ -1,9 +1,9 @@
-package com.example.exam
+package com.example.exam.Views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
+import com.example.exam.R
 import java.util.*
 import kotlin.concurrent.schedule
 

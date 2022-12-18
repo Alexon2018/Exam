@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/rvFragment"
-        android:name="com.example.exam.allfragments.rvFragment"
+        android:name="com.example.exam.Views.allfragments.rvFragment"
         android:label="rvFragment" >
         <action
             android:id="@+id/action_rvFragment_to_detailsFragment"
@@ -14,7 +14,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.example.exam.allfragments.DetailsFragment"
+        android:name="com.example.exam.Views.allfragments.DetailsFragment"
         android:label="DetailsFragment" >
         <action
             android:id="@+id/action_detailsFragment_to_rvFragment"
@@ -22,10 +22,10 @@
     </fragment>
     <fragment
         android:id="@+id/aboutFragment"
-        android:name="com.example.exam.allfragments.aboutFragment"
+        android:name="com.example.exam.Views.allfragments.aboutFragment"
         android:label="aboutFragment" />
     <fragment
         android:id="@+id/contactFragment"
-        android:name="com.example.exam.allfragments.contactFragment"
+        android:name="com.example.exam.Views.allfragments.contactFragment"
         android:label="contactFragment" />
 </navigation>

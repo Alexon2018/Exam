@@ -1,10 +1,8 @@
-package com.example.exam
+package com.example.exam.Views
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.databinding.DataBindingUtil
-import com.example.exam.databinding.ActivityMainBinding
 import com.example.exam.databinding.ActivitySignInBinding
 
 class SignInActivity : AppCompatActivity() {

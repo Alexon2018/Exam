@@ -2,7 +2,7 @@ package com.example.exam.utils
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
-import com.example.exam.MainActivity
+import com.example.exam.Views.MainActivity
 
 class CustomFunctions() : AppCompatActivity() {
 

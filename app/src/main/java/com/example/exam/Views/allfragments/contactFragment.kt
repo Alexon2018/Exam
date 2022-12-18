@@ -1,4 +1,4 @@
-package com.example.exam.allfragments
+package com.example.exam.Views.allfragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import com.example.exam.R
-import com.example.exam.databinding.FragmentAboutBinding
 import com.example.exam.databinding.FragmentContactBinding
 
 class contactFragment : Fragment() {

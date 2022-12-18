@@ -1,4 +1,4 @@
-package com.example.exam
+package com.example.exam.utils
 
 import android.annotation.SuppressLint
 import android.app.Application

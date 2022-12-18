@@ -1,17 +1,13 @@
-package com.example.exam
+package com.example.exam.Views
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
-import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.exam.R
 import com.example.exam.databinding.ActivityMainBinding
-import com.example.exam.dataclasses.MyItem
-import com.example.exam.dataclasses.Response
-import com.example.exam.utils.MyAdapter
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +15,9 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
+        val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this,
+            R.layout.activity_main
+        )
 
         drawerLayout = binding.drawerLayout
 

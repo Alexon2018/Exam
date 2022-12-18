@@ -1,10 +1,6 @@
-package com.example.exam.databases
+package com.example.exam.model
 
-import androidx.lifecycle.LiveData
-import androidx.room.Entity
-import androidx.room.Insert
 import androidx.room.Query
-import androidx.room.Update
 import kotlinx.coroutines.flow.Flow
 
 interface MainDao {

@@ -1,6 +1,5 @@
-package com.example.exam.allfragments
+package com.example.exam.Views.allfragments
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
@@ -8,10 +7,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.exam.Context
-import com.example.exam.DetailActivity
+import com.example.exam.utils.Context
 import com.example.exam.R
-import com.example.exam.allViewModels.mainViewModel
+import com.example.exam.ViewModels.mainViewModel
 import com.example.exam.databinding.FragmentRvBinding
 import com.example.exam.utils.MyAdapter
 

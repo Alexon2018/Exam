@@ -1,6 +1,5 @@
-package com.example.exam.allViewModels
+package com.example.exam.ViewModels
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.example.exam.dataclasses.MyItem
 import com.example.exam.dataclasses.Response

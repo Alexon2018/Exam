@@ -1,9 +1,9 @@
-package com.example.exam.databases
+package com.example.exam.model
 
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import com.example.exam.Context
+import com.example.exam.utils.Context
 
 @Database(entities = [MainEntity::class], version = 1, exportSchema = false)
 abstract class MainDatabase : RoomDatabase() {
