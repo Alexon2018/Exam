@@ -12,9 +12,9 @@ data class MainEntity (
     var entryID: Long = 0L,
 
     @ColumnInfo(name = "question")
-    val startTimeMilli: String = "",
+    val startTimeMilli: String ,
 
     @ColumnInfo(name = "b1")
-    var sleepQuality: Boolean = false
+    var sleepQuality: Boolean
 
     )
