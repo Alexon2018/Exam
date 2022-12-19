@@ -7,6 +7,7 @@ import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exam.R
+import com.example.exam.ViewModels.mainViewModel
 import com.example.exam.dataclasses.MyItem
 
 class MyAdapter(private val myList: List<MyItem>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
@@ -32,8 +33,10 @@ class MyAdapter(private val myList: List<MyItem>) : RecyclerView.Adapter<MyAdapt
 
         init{
             itemView.setOnClickListener {
-                 view : View ->
-                    view.findNavController().navigate(R.id.action_rvFragment_to_detailsFragment)
+                    view : View ->
+                view.findNavController().navigate(R.id.action_itemListFragment_to_addItemFragment)
+
+                mainViewModel().getData()
 
 //                val intent = Intent(itemView.context, DetailActivity::class.java)
 //                intent.putExtra(KEY_Question,   topic?.question)
@@ -63,7 +66,7 @@ class MyAdapter(private val myList: List<MyItem>) : RecyclerView.Adapter<MyAdapt
         holder.tvCategoria.text = currentItem.category
         holder.tvDate.text      = currentItem.currentDate
 
-            holder.topic            = currentItem
+        holder.topic            = currentItem
 
     }
 

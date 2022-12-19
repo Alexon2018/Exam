@@ -1,26 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
-    app:startDestination="@id/rvFragment">
+    app:startDestination="@id/itemListFragment">
 
-    <fragment
-        android:id="@+id/rvFragment"
-        android:name="com.example.exam.Views.allfragments.rvFragment"
-        android:label="rvFragment" >
-        <action
-            android:id="@+id/action_rvFragment_to_detailsFragment"
-            app:destination="@id/detailsFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/detailsFragment"
-        android:name="com.example.exam.Views.allfragments.DetailsFragment"
-        android:label="DetailsFragment" >
-        <action
-            android:id="@+id/action_detailsFragment_to_rvFragment"
-            app:destination="@id/rvFragment" />
-    </fragment>
-    <fragment
+      <fragment
         android:id="@+id/aboutFragment"
         android:name="com.example.exam.Views.allfragments.aboutFragment"
         android:label="aboutFragment" />
@@ -28,4 +13,21 @@
         android:id="@+id/contactFragment"
         android:name="com.example.exam.Views.allfragments.contactFragment"
         android:label="contactFragment" />
+    <fragment
+        android:id="@+id/itemListFragment"
+        android:name="com.example.exam.ItemListFragment"
+        android:label="fragment_item_list"
+        tools:layout="@layout/fragment_item_list" >
+        <action
+            android:id="@+id/action_itemListFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.exam.Views.allfragments.AddItemFragment"
+        android:label="AddItemFragment" >
+        <action
+            android:id="@+id/action_addItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment" />
+    </fragment>
 </navigation>
