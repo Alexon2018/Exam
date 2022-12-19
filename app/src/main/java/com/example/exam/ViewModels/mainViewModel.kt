@@ -14,7 +14,7 @@ class mainViewModel : ViewModel() {
         Response("Tramvaiul", false),
         Response("Ambulanta cu semnalalele luminoase si sonore pornite", false),
         Response("BMW-ul cu numere de Bulgaria", true),
-        "Categoria intai",
+        "Categoria : PRIORITATE",
         "23-12-2022"
     )
 ////end of mock data

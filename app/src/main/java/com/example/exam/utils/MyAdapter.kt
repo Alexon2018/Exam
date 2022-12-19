@@ -16,7 +16,7 @@ class MyAdapter(private val myList: List<MyItem>) : RecyclerView.Adapter<MyAdapt
         val tvQuestion = itemView.findViewById<TextView>(R.id.idQuestion)
         val tvCategoria = itemView.findViewById<TextView>(R.id.idCategoria)
         val tvDate = itemView.findViewById<TextView>(R.id.idDate)
-        val tvCheck = itemView.findViewById<TextView>(R.id.idNumber)
+        val tvCheck = itemView.findViewById<TextView>(R.id.idCheck)
 
         companion object{
             const val KEY_Question  = "aici punem intrebarea"
@@ -61,9 +61,9 @@ class MyAdapter(private val myList: List<MyItem>) : RecyclerView.Adapter<MyAdapt
         val currentItem = myList[position]
         holder.tvQuestion.text  = currentItem.question
         holder.tvCategoria.text = currentItem.category
-        holder.tvDate.text      = currentItem.response1.response
+        holder.tvDate.text      = currentItem.currentDate
 
-        holder.topic            = currentItem
+            holder.topic            = currentItem
 
     }
 
