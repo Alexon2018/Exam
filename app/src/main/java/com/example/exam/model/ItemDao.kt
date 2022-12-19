@@ -7,13 +7,13 @@ import kotlinx.coroutines.flow.Flow
 interface ItemDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(item: Item)
+    suspend fun insert(item: Item)
 
     @Update
-    fun update(item: Item)
+    suspend fun update(item: Item)
 
     @Delete
-    fun delete(item: Item)
+    suspend fun delete(item: Item)
 
     @Query("SELECT * from item WHERE id = :id")
     fun getItem(id: Int): Flow<Item>
