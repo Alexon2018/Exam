@@ -37,7 +37,7 @@ class ItemListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = ItemListAdapter {
-            val action =   ItemListFragmentDirections.actionItemListFragmentToItemDetailFragment()
+            val action =   ItemListFragmentDirections.actionItemListFragmentToItemDetailFragment(it.id)
             this.findNavController().navigate(action)
         }
 
@@ -50,11 +50,11 @@ class ItemListFragment : Fragment() {
 
         binding.recyclerView.layoutManager = LinearLayoutManager(this.context)
         binding.floatingActionButton.setOnClickListener {
-//            val action = ItemListFragmentDirections.actionItemListFragmentToAddItemFragment(
-//                getString(R.string.add_fragment_title)
-//            )
-//            this.findNavController().navigate(action)
-            findNavController().navigate(R.id.action_itemListFragment_to_addItemFragment)
+            val action = ItemListFragmentDirections.actionItemListFragmentToAddItemFragment(
+                getString(R.string.add_fragment_title)
+            )
+            this.findNavController().navigate(action)
+//            findNavController().navigate(R.id.action_itemListFragment_to_addItemFragment)
         }
     }
 }

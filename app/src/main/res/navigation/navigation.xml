@@ -16,26 +16,43 @@
     <fragment
         android:id="@+id/itemListFragment"
         android:name="com.example.exam.ItemListFragment"
-        android:label="fragment_item_list"
-        tools:layout="@layout/fragment_item_list" >
-        <action
-            android:id="@+id/action_itemListFragment_to_addItemFragment"
-            app:destination="@id/addItemFragment" />
+        android:label="@string/app_name"
+        tools:layout="@layout/fragment_item_list">
         <action
             android:id="@+id/action_itemListFragment_to_itemDetailFragment"
             app:destination="@id/itemDetailFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/addItemFragment"
-        android:name="com.example.exam.Views.allfragments.AddItemFragment"
-        android:label="AddItemFragment" >
         <action
-            android:id="@+id/action_addItemFragment_to_itemListFragment"
-            app:destination="@id/itemListFragment" />
+            android:id="@+id/action_itemListFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
     </fragment>
     <fragment
         android:id="@+id/itemDetailFragment"
         android:name="com.example.exam.Views.allfragments.ItemDetailFragment"
-        android:label="fragment_item_detail"
-        tools:layout="@layout/fragment_item_detail" />
+        android:label="@string/item_detail_fragment_title"
+        tools:layout="@layout/fragment_item_detail">
+        <argument
+            android:name="item_id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_itemDetailFragment_to_addItemFragment"
+            app:destination="@id/addItemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addItemFragment"
+        android:name="com.example.exam.Views.allfragments.AddItemFragment"
+        android:label="{title}"
+        tools:layout="@layout/fragment_add_item">
+        <argument
+            android:name="title"
+            app:argType="string" />
+        <argument
+            android:name="item_id"
+            android:defaultValue="-1"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_addItemFragment_to_itemListFragment"
+            app:destination="@id/itemListFragment"
+            app:popUpTo="@id/itemListFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
