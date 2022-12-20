@@ -2,7 +2,7 @@
     <string name="app_name">Exam</string>
 
     // Splash
-    <string name="idSplashText">Splash Text</string>
+    <string name="idSplashText">eXam</string>
 
     // SignIn
     <string name="idTextSignIn">Pagina de autentificare</string>

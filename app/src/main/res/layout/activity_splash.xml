@@ -4,15 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Views.SplashActivity">
+    tools:context=".Views.SplashActivity"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:id="@+id/idSplashText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="cursive"
         android:text="@string/idSplashText"
+        android:textSize="72sp"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="49dp"
+        android:layout_height="41dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/idSplashText"
+        app:layout_constraintStart_toEndOf="@+id/idSplashText"
+        app:layout_constraintTop_toTopOf="@+id/idSplashText"
+        app:srcCompat="@drawable/ic_baseline_auto_awesome_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>

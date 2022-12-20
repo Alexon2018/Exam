@@ -12,7 +12,7 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
 
-        Timer().schedule(1000){
+        Timer().schedule(10000){
             val intent = Intent(applicationContext, SignInActivity::class.java)
             startActivity(intent)
             finish()
