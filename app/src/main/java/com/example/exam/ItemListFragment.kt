@@ -37,7 +37,10 @@ class ItemListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val adapter = ItemListAdapter {
+            val action =   ItemListFragmentDirections.actionItemListFragmentToItemDetailFragment()
+            this.findNavController().navigate(action)
         }
+
         binding.recyclerView.adapter = adapter
         viewModel.allItems.observe(this.viewLifecycleOwner) { items ->
             items.let {

@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_itemListFragment_to_addItemFragment"
             app:destination="@id/addItemFragment" />
+        <action
+            android:id="@+id/action_itemListFragment_to_itemDetailFragment"
+            app:destination="@id/itemDetailFragment" />
     </fragment>
     <fragment
         android:id="@+id/addItemFragment"
@@ -30,4 +33,9 @@
             android:id="@+id/action_addItemFragment_to_itemListFragment"
             app:destination="@id/itemListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/itemDetailFragment"
+        android:name="com.example.exam.Views.allfragments.ItemDetailFragment"
+        android:label="fragment_item_detail"
+        tools:layout="@layout/fragment_item_detail" />
 </navigation>
