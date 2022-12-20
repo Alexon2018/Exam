@@ -14,7 +14,7 @@ import com.example.exam.ViewModels.InventoryViewModelFactory
 import com.example.exam.databinding.FragmentItemDetailBinding
 import com.example.exam.model.InventoryApplication
 import com.example.exam.model.Item
-import com.example.exam.model.getFormattedPrice
+//import com.example.exam.model.getFormattedPrice
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class ItemDetailFragment : Fragment() {
@@ -35,8 +35,8 @@ class ItemDetailFragment : Fragment() {
         binding.apply {
             itemIntrebare.text = item.itemIntrebare
             itemRaspuns1.text = item.itemRaspuns1
-            itemPrice.text = item.getFormattedPrice()
-            itemCount.text = item.quantityInStock.toString()
+//            itemPrice.text = item.getFormattedPrice()
+//            itemCount.text = item.quantityInStock.toString()
 
 //            sellItem.setOnClickListener { viewModel.sellItem(item) }
 //            sellItem.isEnabled = viewModel.isStockAvailable(item)

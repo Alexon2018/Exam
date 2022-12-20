@@ -15,22 +15,26 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         }
     }
 
-    private fun getNewItemEntry(itemName: String, itemRaspuns1: String, itemPrice:String, itemCount: String): Item {
+    private fun getNewItemEntry(itemName: String, itemRaspuns1: String): Item {
         return Item(
             itemIntrebare = itemName,
-            itemRaspuns1 = itemRaspuns1,
-            itemPrice = itemPrice.toDouble(),
-            quantityInStock = itemCount.toInt()
+            itemRaspuns1 = itemRaspuns1
+//            itemPrice = itemPrice.toDouble(),
+//            quantityInStock = itemCount.toInt()
         )
     }
 
-    fun addNewItem(itemName: String, itemRaspuns1: String, itemPrice: String, itemCount: String) {
-        val newItem = getNewItemEntry(itemName, itemRaspuns1, itemPrice, itemCount)
+    fun addNewItem(itemName: String, itemRaspuns1: String,
+//                   itemPrice: String, itemCount: String
+    ) {
+        val newItem = getNewItemEntry(itemName, itemRaspuns1,
+//            itemPrice, itemCount
+        )
         insertItem(newItem)
     }
 
-    fun isEntryValid(itemName: String, itemPrice: String, itemCount: String): Boolean {
-        if (itemName.isBlank() || itemPrice.isBlank() || itemCount.isBlank()) {
+    fun isEntryValid(itemName: String, itemRaspuns1: String): Boolean {
+        if (itemName.isBlank() || itemRaspuns1.isBlank()) {
             return false
         }
         return true
@@ -67,35 +71,25 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     private fun getUpdatedItemEntry(
         itemId: Int,
         itemName: String,
-        itemRaspuns1: String,
-        itemPrice: String,
-        itemCount: String
+        itemRaspuns1: String
     ): Item {
         return Item(
             id = itemId,
             itemIntrebare = itemName,
-            itemRaspuns1 = itemRaspuns1,
-            itemPrice = itemPrice.toDouble(),
-            quantityInStock = itemCount.toInt()
+            itemRaspuns1 = itemRaspuns1
+//            itemPrice = itemPrice.toDouble(),
+//            quantityInStock = itemCount.toInt()
         )
     }
 
     fun updateItem(
         itemId: Int,
         itemName: String,
-        itemRaspuns1 : String,
-        itemPrice: String,
-        itemCount: String
+        itemRaspuns1 : String
     ) {
-        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemRaspuns1, itemPrice, itemCount)
+        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemRaspuns1)
         updateItem(updatedItem)
     }
-
-
-
-
-
-
 
 }
 class InventoryViewModelFactory(private val itemDao: ItemDao) : ViewModelProvider.Factory {

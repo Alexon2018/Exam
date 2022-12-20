@@ -12,13 +12,13 @@ data class Item(
     @ColumnInfo(name = "intrebare")
     val itemIntrebare: String,
     @ColumnInfo(name = "raspuns1")
-    val itemRaspuns1: String,
-    @ColumnInfo(name = "price")
-    val itemPrice: Double,
-    @ColumnInfo(name = "quantity")
-    val quantityInStock: Int
+    val itemRaspuns1: String
+//    @ColumnInfo(name = "price")
+//    val itemPrice: Double,
+//    @ColumnInfo(name = "quantity")
+//    val quantityInStock: Int
 
 )
 
-fun Item.getFormattedPrice(): String =
-    NumberFormat.getCurrencyInstance().format(itemPrice)
+//fun Item.getFormattedPrice(): String =
+//    NumberFormat.getCurrencyInstance().format(itemPrice)

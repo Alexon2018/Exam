@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.exam.databinding.ItemListItemBinding
 import com.example.exam.model.Item
-import com.example.exam.model.getFormattedPrice
+//import com.example.exam.model.getFormattedPrice
 
 class ItemListAdapter(private val onItemClicked: (Item) -> Unit) :
     ListAdapter<Item, ItemListAdapter.ItemViewHolder>(DiffCallback) {
@@ -39,8 +39,8 @@ class ItemListAdapter(private val onItemClicked: (Item) -> Unit) :
             binding.apply {
                 itemIntrebare.text = item.itemIntrebare
                 itemRaspuns1.text = item.itemRaspuns1
-                itemPrice.text = item.getFormattedPrice()
-                itemQuantity.text = item.quantityInStock.toString()
+//                itemPrice.text = item.getFormattedPrice()
+//                itemQuantity.text = item.quantityInStock.toString()
             }
         }
 
