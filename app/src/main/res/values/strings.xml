@@ -29,6 +29,7 @@
     <string name="quantity_in_stock">Quantity\nIn Stock</string>
     <string name="item">Item</string>
     <string name="delete">Delete</string>
+    <string name="atentie">Atentie!</string>
     <string name="delete_question">Sigur vrei sa stergi intrebarea</string>
     <string name="no">Nu</string>
     <string name="yes">Da</string>

@@ -37,8 +37,8 @@ class ItemDetailFragment : Fragment() {
             itemPrice.text = item.getFormattedPrice()
             itemCount.text = item.quantityInStock.toString()
 
-            sellItem.setOnClickListener { viewModel.sellItem(item) }
-            sellItem.isEnabled = viewModel.isStockAvailable(item)
+//            sellItem.setOnClickListener { viewModel.sellItem(item) }
+//            sellItem.isEnabled = viewModel.isStockAvailable(item)
             deleteItem.setOnClickListener { showConfirmationDialog() }
             editItem.setOnClickListener { editItem() }
 
@@ -70,7 +70,7 @@ class ItemDetailFragment : Fragment() {
 
     private fun showConfirmationDialog() {
         MaterialAlertDialogBuilder(requireContext())
-            .setTitle(getString(android.R.string.dialog_alert_title))
+            .setTitle(getString(R.string.atentie))
             .setMessage(getString(R.string.delete_question))
             .setCancelable(false)
             .setNegativeButton(getString(R.string.no)) { _, _ -> }
