@@ -37,7 +37,7 @@ class ItemListAdapter(private val onItemClicked: (Item) -> Unit) :
 
         fun bind(item: Item) {
             binding.apply {
-                itemIntrebare.text = item.itemName
+                itemIntrebare.text = item.itemIntrebare
                 itemPrice.text = item.getFormattedPrice()
                 itemQuantity.text = item.quantityInStock.toString()
             }
@@ -52,7 +52,7 @@ class ItemListAdapter(private val onItemClicked: (Item) -> Unit) :
             }
 
             override fun areContentsTheSame(oldItem: Item, newItem: Item): Boolean {
-                return oldItem.itemName == newItem.itemName
+                return oldItem.itemIntrebare == newItem.itemIntrebare
             }
         }
     }

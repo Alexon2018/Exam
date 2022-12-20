@@ -8,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.activityViewModels
-import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.exam.R
 import com.example.exam.ViewModels.InventoryViewModel
 import com.example.exam.ViewModels.InventoryViewModelFactory
 import com.example.exam.databinding.FragmentAddItemBinding
@@ -80,7 +78,7 @@ class AddItemFragment : Fragment() {
     private fun bind(item: Item) {
         val price = "%.2f".format(item.itemPrice)
         binding.apply {
-            itemIntrebare.setText(item.itemName, TextView.BufferType.SPANNABLE)
+            itemIntrebare.setText(item.itemIntrebare, TextView.BufferType.SPANNABLE)
             itemPrice.setText(price, TextView.BufferType.SPANNABLE)
             itemCount.setText(item.quantityInStock.toString(), TextView.BufferType.SPANNABLE)
 
