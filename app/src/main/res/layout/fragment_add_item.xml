@@ -21,13 +21,14 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/item_name"
+                android:id="@+id/item_intrebare"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
                 android:inputType="textAutoComplete|textCapWords"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/item_price_label"
@@ -64,7 +65,7 @@
                 android:id="@+id/item_count"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="number"
+
                 android:background="@color/white"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>

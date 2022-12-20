@@ -9,7 +9,7 @@
         tools:context=".Views.allfragments.ItemDetailFragment">
 
         <TextView
-            android:id="@+id/item_name"
+            android:id="@+id/item_intrebare"
             style="@style/Widget.Inventory.TextView"
             android:layout_width="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_marginTop="@dimen/margin"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_name"
+            app:layout_constraintTop_toBottomOf="@+id/item_intrebare"
             tools:text="$5.50" />
 
         <TextView

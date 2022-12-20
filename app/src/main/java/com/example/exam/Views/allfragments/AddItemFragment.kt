@@ -43,7 +43,7 @@ class AddItemFragment : Fragment() {
 
     private fun isEntryValid(): Boolean {
         return viewModel.isEntryValid(
-            binding.itemName.text.toString(),
+            binding.itemIntrebare.text.toString(),
             binding.itemPrice.text.toString(),
             binding.itemCount.text.toString(),
         )
@@ -52,7 +52,7 @@ class AddItemFragment : Fragment() {
     private fun addNewItem() {
         if (isEntryValid()) {
             viewModel.addNewItem(
-                binding.itemName.text.toString(),
+                binding.itemIntrebare.text.toString(),
                 binding.itemPrice.text.toString(),
                 binding.itemCount.text.toString(),
             )
@@ -80,7 +80,7 @@ class AddItemFragment : Fragment() {
     private fun bind(item: Item) {
         val price = "%.2f".format(item.itemPrice)
         binding.apply {
-            itemName.setText(item.itemName, TextView.BufferType.SPANNABLE)
+            itemIntrebare.setText(item.itemName, TextView.BufferType.SPANNABLE)
             itemPrice.setText(price, TextView.BufferType.SPANNABLE)
             itemCount.setText(item.quantityInStock.toString(), TextView.BufferType.SPANNABLE)
 
@@ -92,7 +92,7 @@ class AddItemFragment : Fragment() {
         if (isEntryValid()) {
             viewModel.updateItem(
                 this.navigationArgs.itemId,
-                this.binding.itemName.text.toString(),
+                this.binding.itemIntrebare.text.toString(),
                 this.binding.itemPrice.text.toString(),
                 this.binding.itemCount.text.toString()
             )
