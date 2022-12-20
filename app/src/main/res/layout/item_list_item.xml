@@ -32,6 +32,22 @@
             tools:text="Aici vine intrebarea cea mai lunga posibil" />
 
         <TextView
+            android:id="@+id/item_raspuns1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="24dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-condensed-light"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="@+id/idCheck"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_intrebare"
+            tools:text="aici este primul raspuns" />
+
+        <TextView
             android:id="@+id/item_price"
             android:layout_width="0dp"
             android:layout_height="wrap_content"

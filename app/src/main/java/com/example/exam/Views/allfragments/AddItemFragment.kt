@@ -51,6 +51,7 @@ class AddItemFragment : Fragment() {
         if (isEntryValid()) {
             viewModel.addNewItem(
                 binding.itemIntrebare.text.toString(),
+                binding.itemRaspuns1.text.toString(),
                 binding.itemPrice.text.toString(),
                 binding.itemCount.text.toString(),
             )
@@ -79,6 +80,7 @@ class AddItemFragment : Fragment() {
         val price = "%.2f".format(item.itemPrice)
         binding.apply {
             itemIntrebare.setText(item.itemIntrebare, TextView.BufferType.SPANNABLE)
+            itemRaspuns1.setText(item.itemRaspuns1, TextView.BufferType.SPANNABLE)
             itemPrice.setText(price, TextView.BufferType.SPANNABLE)
             itemCount.setText(item.quantityInStock.toString(), TextView.BufferType.SPANNABLE)
 
@@ -91,6 +93,7 @@ class AddItemFragment : Fragment() {
             viewModel.updateItem(
                 this.navigationArgs.itemId,
                 this.binding.itemIntrebare.text.toString(),
+                this.binding.itemRaspuns1.text.toString(),
                 this.binding.itemPrice.text.toString(),
                 this.binding.itemCount.text.toString()
             )

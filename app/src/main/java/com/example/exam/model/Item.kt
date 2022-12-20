@@ -11,6 +11,8 @@ data class Item(
     val id: Int = 0,
     @ColumnInfo(name = "intrebare")
     val itemIntrebare: String,
+    @ColumnInfo(name = "raspuns1")
+    val itemRaspuns1: String,
     @ColumnInfo(name = "price")
     val itemPrice: Double,
     @ColumnInfo(name = "quantity")

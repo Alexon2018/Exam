@@ -34,6 +34,7 @@ class ItemDetailFragment : Fragment() {
     private fun bind(item: Item) {
         binding.apply {
             itemIntrebare.text = item.itemIntrebare
+            itemRaspuns1.text = item.itemRaspuns1
             itemPrice.text = item.getFormattedPrice()
             itemCount.text = item.quantityInStock.toString()
 

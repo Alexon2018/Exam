@@ -15,16 +15,17 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         }
     }
 
-    private fun getNewItemEntry(itemName: String, itemPrice: String, itemCount: String): Item {
+    private fun getNewItemEntry(itemName: String, itemRaspuns1: String, itemPrice:String, itemCount: String): Item {
         return Item(
             itemIntrebare = itemName,
+            itemRaspuns1 = itemRaspuns1,
             itemPrice = itemPrice.toDouble(),
             quantityInStock = itemCount.toInt()
         )
     }
 
-    fun addNewItem(itemName: String, itemPrice: String, itemCount: String) {
-        val newItem = getNewItemEntry(itemName, itemPrice, itemCount)
+    fun addNewItem(itemName: String, itemRaspuns1: String, itemPrice: String, itemCount: String) {
+        val newItem = getNewItemEntry(itemName, itemRaspuns1, itemPrice, itemCount)
         insertItem(newItem)
     }
 
@@ -66,12 +67,14 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     private fun getUpdatedItemEntry(
         itemId: Int,
         itemName: String,
+        itemRaspuns1: String,
         itemPrice: String,
         itemCount: String
     ): Item {
         return Item(
             id = itemId,
             itemIntrebare = itemName,
+            itemRaspuns1 = itemRaspuns1,
             itemPrice = itemPrice.toDouble(),
             quantityInStock = itemCount.toInt()
         )
@@ -80,10 +83,11 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     fun updateItem(
         itemId: Int,
         itemName: String,
+        itemRaspuns1 : String,
         itemPrice: String,
         itemCount: String
     ) {
-        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemPrice, itemCount)
+        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemRaspuns1, itemPrice, itemCount)
         updateItem(updatedItem)
     }
 

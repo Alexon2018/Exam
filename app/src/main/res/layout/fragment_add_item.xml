@@ -11,7 +11,7 @@
         android:layout_margin="@dimen/margin">
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/item_name_label"
+            android:id="@+id/item_intrebare_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin"
@@ -29,24 +29,41 @@
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/item_raspuns1_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_raspuns1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_intrebare_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_raspuns1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:inputType="textAutoComplete|textCapWords"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/item_price_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin"
             android:hint="@string/item_price_req"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_name_label"
+            app:layout_constraintTop_toBottomOf="@+id/item_raspuns1_label"
             app:prefixText="@string/currency_symbol">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/item_price"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:inputType="numberDecimal"
                 android:background="@color/white"
+                android:inputType="numberDecimal"
                 android:singleLine="true" />
         </com.google.android.material.textfield.TextInputLayout>
 
