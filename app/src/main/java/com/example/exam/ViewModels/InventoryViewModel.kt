@@ -34,7 +34,7 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     private fun getNewItemEntry(itemName: String, itemCategoria: String, itemRaspuns1: String, itemRaspuns2: String): Item {
         return Item(
             itemIntrebare = itemName,
-            itemCategoria = itemName,
+            itemCategoria = itemCategoria,
             itemRaspuns1 = itemRaspuns1,
             itemRaspuns2 = itemRaspuns2
         )
@@ -84,7 +84,7 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         itemRaspuns1 : String,
         itemRaspuns2 : String
     ) {
-        val updatedItem = getUpdatedItemEntry(itemId, itemCategoria, itemName, itemRaspuns1, itemRaspuns2)
+        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemCategoria, itemRaspuns1, itemRaspuns2)
         updateItem(updatedItem)
     }
 

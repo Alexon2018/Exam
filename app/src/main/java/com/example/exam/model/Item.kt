@@ -11,10 +11,10 @@ data class Item(
     val id: Int = 0,
     @ColumnInfo(name = "intrebare")
     val itemIntrebare: String,
+    @ColumnInfo(name = "categoria")
+    val itemCategoria: String,
     @ColumnInfo(name = "raspuns1")
     val itemRaspuns1: String,
     @ColumnInfo(name = "raspuns2")
-    val itemRaspuns2: String,
-    @ColumnInfo(name = "categoria")
-    val itemCategoria: String
+    val itemRaspuns2: String
 )

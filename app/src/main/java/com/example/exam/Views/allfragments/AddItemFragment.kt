@@ -44,9 +44,9 @@ class AddItemFragment : Fragment() {
         if (isEntryValid()) {
             viewModel.addNewItem(
                 binding.itemIntrebare.text.toString(),
+                binding.itemCategoria.text.toString(),
                 binding.itemRaspuns1.text.toString(),
-                binding.itemRaspuns2.text.toString(),
-                binding.itemCategoria.text.toString()
+                binding.itemRaspuns2.text.toString()
 
             )
             val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()

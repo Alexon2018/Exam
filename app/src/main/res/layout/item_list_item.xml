@@ -32,70 +32,26 @@
             tools:text="Aici vine intrebarea cea mai lunga posibil" />
 
         <TextView
-            android:id="@+id/item_raspuns1"
+            android:id="@+id/item_categoria"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
 
-            android:layout_marginStart="24dp"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-condensed-light"
-            android:maxLines="1"
-            android:textColor="@color/colorPrimaryDark"
-            android:visibility="gone"
-            app:layout_constraintEnd_toStartOf="@+id/idCheck"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_intrebare"
-            tools:text="aici este primul raspuns" />
-
-        <TextView
-            android:id="@+id/item_raspuns2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="24dp"
-            android:ellipsize="end"
-            android:fontFamily="sans-serif-condensed-light"
-            android:maxLines="1"
-            android:textColor="@color/colorPrimaryDark"
-            android:visibility="gone"
-            app:layout_constraintEnd_toStartOf="@+id/idCheck"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_intrebare"
-            tools:text="aici este primul raspuns" />
-
-        <TextView
-            android:id="@+id/item_price"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
+            android:ellipsize="end"
             android:fontFamily="sans-serif-condensed-light"
-            android:visibility="gone"
-            android:textColor="@color/colorAccent"
-            android:textSize="18sp"
+            android:maxLines="1"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toEndOf="@+id/item_intrebare"
             app:layout_constraintStart_toStartOf="@+id/item_intrebare"
             app:layout_constraintTop_toBottomOf="@+id/item_intrebare"
-            tools:text="Categoria : PRIORITATE" />
-
-        <TextView
-            android:id="@+id/item_quantity"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:ellipsize="end"
-            android:fontFamily="monospace"
-            android:visibility="gone"
-            android:textColor="@color/colorAccent"
-            android:textSize="14sp"
-            app:layout_constraintStart_toStartOf="@+id/item_price"
-            app:layout_constraintTop_toBottomOf="@+id/item_price"
-            tools:text="23/12/2022" />
+            tools:text="categoria" />
 
         <CheckBox
             android:id="@+id/idCheck"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="4dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

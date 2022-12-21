@@ -39,8 +39,7 @@ class ItemListAdapter(private val onItemClicked: (Item) -> Unit) :
         fun bind(item: Item) {
             binding.apply {
                 itemIntrebare.text = item.itemIntrebare
-                itemRaspuns1.text = item.itemRaspuns1
-                itemRaspuns2.text = item.itemRaspuns2
+                itemCategoria.text = item.itemCategoria
             }
         }
 
