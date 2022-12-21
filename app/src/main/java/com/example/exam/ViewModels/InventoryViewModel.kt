@@ -31,23 +31,24 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     }
 
     //aici pregatim un nou entry, cu parametrii necesari, si intoarcem un obiect de tip model/Item
-    private fun getNewItemEntry(itemName: String, itemRaspuns1: String, itemRaspuns2: String): Item {
+    private fun getNewItemEntry(itemName: String, itemCategoria: String, itemRaspuns1: String, itemRaspuns2: String): Item {
         return Item(
             itemIntrebare = itemName,
+            itemCategoria = itemName,
             itemRaspuns1 = itemRaspuns1,
             itemRaspuns2 = itemRaspuns2
         )
     }
 
     // aici construim functia de add, luam parametrii cu getNew si apoi apelam insert/corutina
-    fun addNewItem(itemName: String, itemRaspuns1: String, itemRaspuns2: String ) {
-        val newItem = getNewItemEntry(itemName, itemRaspuns1, itemRaspuns2)
+    fun addNewItem(itemName: String, itemCategoria : String, itemRaspuns1: String, itemRaspuns2: String ) {
+        val newItem = getNewItemEntry(itemName, itemCategoria, itemRaspuns1, itemRaspuns2)
         insertItem(newItem)
     }
 
     //aici verificam daca sunt completate campurile din formular
-    fun isEntryValid(itemName: String, itemRaspuns1: String, itemRaspuns2: String): Boolean {
-        if (itemName.isBlank() || itemRaspuns1.isBlank() || itemRaspuns2.isBlank()) {
+    fun isEntryValid(itemName: String, itemCategoria: String, itemRaspuns1: String, itemRaspuns2: String): Boolean {
+        if (itemName.isBlank() || itemCategoria.isBlank() || itemRaspuns1.isBlank() || itemRaspuns2.isBlank()) {
             return false
         }
         return true
@@ -62,12 +63,14 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     private fun getUpdatedItemEntry(
         itemId: Int,
         itemName: String,
+        itemCategoria: String,
         itemRaspuns1: String,
         itemRaspuns2: String
     ): Item {
         return Item(
             id = itemId,
             itemIntrebare = itemName,
+            itemCategoria = itemCategoria,
             itemRaspuns1 = itemRaspuns1,
             itemRaspuns2 = itemRaspuns2
         )
@@ -77,10 +80,11 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     fun updateItem(
         itemId: Int,
         itemName: String,
+        itemCategoria: String,
         itemRaspuns1 : String,
         itemRaspuns2 : String
     ) {
-        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemRaspuns1, itemRaspuns2)
+        val updatedItem = getUpdatedItemEntry(itemId, itemCategoria, itemName, itemRaspuns1, itemRaspuns2)
         updateItem(updatedItem)
     }
 

@@ -30,13 +30,31 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/item_categoria_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/item_categoria"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/item_intrebare_label">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/item_categoria"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:inputType="textAutoComplete|textCapWords"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/item_raspuns1_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:hint="@string/item_raspuns1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_intrebare_label">
+            app:layout_constraintTop_toBottomOf="@+id/item_categoria_label">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/item_raspuns1"
@@ -51,7 +69,7 @@
             android:id="@+id/item_raspuns2_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:hint="@string/item_raspuns1"
+            android:hint="@string/item_raspuns2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/item_raspuns1_label">

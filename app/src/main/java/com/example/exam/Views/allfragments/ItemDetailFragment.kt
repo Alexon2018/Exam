@@ -35,6 +35,7 @@ class ItemDetailFragment : Fragment() {
     private fun bind(item: Item) {
         binding.apply {
             itemIntrebare.text = item.itemIntrebare
+            itemCategoria.text = item.itemCategoria
             itemRaspuns1.text = item.itemRaspuns1
             itemRaspuns2.text = item.itemRaspuns2
 

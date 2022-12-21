@@ -20,7 +20,9 @@
     <string name="quantity">Quantity in Stock:</string>
     <string name="quantity_req">Quantity in Stock <font color='#FF0000'>*</font></string>
     <string name="item_intrebare">Intrebarea ta este: <font color='#FF0000'>*</font></string>
-    <string name="item_raspuns1">Raspunsul numarul 1 este: <font color='#FF0000'>*</font></string>
+    <string name="item_categoria">Categoria <font color='#FF0000'>*</font></string>
+    <string name="item_raspuns1">Raspunsul numarul 1: <font color='#FF0000'>*</font></string>
+    <string name="item_raspuns2">Raspunsul numarul 2: <font color='#FF0000'>*</font></string>
     <string name="item_price_req">Item Price <font color='#FF0000'>*</font></string>
     <string name="save_action">Save</string>
     <string name="item_detail_fragment_title">Detalii</string>
