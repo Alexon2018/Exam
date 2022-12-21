@@ -12,7 +12,12 @@
 
     // About
     <string name="idTitleAbout">.despre_noi</string>
-    <string name="idDescriptionAbout">Ne plac tool-urile de calitate si de aceea, astazi va recomandam glide.</string>
+    <string name="idDescriptionAbout">Ne plac tool-urile de calitate si de aceea, astazi va recomandam "glide".\n\nRapid si eficient in incarcarea imaginilor de pe Internet!</string>
+
+    // Contact
+    <string name="idTitleContact">.contact</string>
+    <string name="idAdresa">ADRESA: TIMISOARA\nStr. Dorobantilor, nr. 3</string>
+    <string name="idTelefon">TELEFON: 0311.302.903</string>
 
 
     // Main
@@ -35,6 +40,7 @@
     <string name="item">Item</string>
     <string name="delete">Delete</string>
     <string name="share">Share</string>
+    <string name="call">Call</string>
 
     <string name="atentie">Atentie!</string>
     <string name="delete_question">Sigur vrei sa stergi intrebarea</string>
@@ -43,5 +49,7 @@
 
     <string name="edit_item">Editeaza intrebarea</string>
     <string name="add_new_item">Adauga o noua intrebare</string>
+
+    <string name="phoneNumber">0311302903</string>
 
 </resources>
