@@ -39,7 +39,7 @@ class ContactFragment : Fragment() {
     private fun startSharing(){
         val sendIntent: Intent = Intent().apply {
             action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, "Iti trimit cea mai cool aplicatie")
+            putExtra(Intent.EXTRA_TEXT, "Cea mai cool aplicatie")
             type = "text/plain"
         }
         val shareIntent = Intent.createChooser(sendIntent,null)
