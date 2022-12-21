@@ -10,33 +10,37 @@
     <string name="buttonElev">Elevul</string>
     <string name="contentDescriptionSignIn">Aici este poza pentru pagina de SignIn</string>
 
+    // About
+    <string name="idTitleAbout">.despre_noi</string>
+    <string name="idDescriptionAbout">Ne plac tool-urile de calitate si de aceea, astazi va recomandam glide.</string>
+
+
     // Main
     <string name="idTextMainPage">Welcome to the main page</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
-    <string name="sell">Sell</string>
-    <string name="quantity">Quantity in Stock:</string>
-    <string name="quantity_req">Quantity in Stock <font color='#FF0000'>*</font></string>
+
     <string name="item_intrebare">Intrebarea ta este: <font color='#FF0000'>*</font></string>
     <string name="item_categoria">Categoria <font color='#FF0000'>*</font></string>
     <string name="item_raspuns1">Raspunsul numarul 1: <font color='#FF0000'>*</font></string>
     <string name="item_raspuns2">Raspunsul numarul 2: <font color='#FF0000'>*</font></string>
-    <string name="item_price_req">Item Price <font color='#FF0000'>*</font></string>
+
     <string name="save_action">Save</string>
     <string name="item_detail_fragment_title">Detalii</string>
     <string name="add_fragment_title">Adauga o noua intrebare</string>
     <string name="edit_fragment_title">Editeaza intrebarea</string>
-    <string name="price">Price</string>
-    <string name="quantity_in_stock">Quantity\nIn Stock</string>
+
     <string name="item">Item</string>
     <string name="delete">Delete</string>
+    <string name="share">Share</string>
+
     <string name="atentie">Atentie!</string>
     <string name="delete_question">Sigur vrei sa stergi intrebarea</string>
     <string name="no">Nu</string>
     <string name="yes">Da</string>
-    <string name="currency_symbol">$</string>
+
     <string name="edit_item">Editeaza intrebarea</string>
     <string name="add_new_item">Adauga o noua intrebare</string>
 

@@ -48,7 +48,7 @@ class AddItemFragment : Fragment() {
                 binding.itemRaspuns1.text.toString(),
                 binding.itemRaspuns2.text.toString(),
                 binding.itemBool1.isChecked,
-                binding.itemBool1.isChecked
+                binding.itemBool2.isChecked
             )
             val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
             findNavController().navigate(action)

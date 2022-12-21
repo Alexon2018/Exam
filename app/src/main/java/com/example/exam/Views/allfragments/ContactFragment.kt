@@ -29,22 +29,8 @@ class ContactFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        binding.shareButton.setOnClickListener {
-            startSharing()
-        }
-
     }
 
-    private fun startSharing(){
-        val sendIntent: Intent = Intent().apply {
-            action = Intent.ACTION_SEND
-            putExtra(Intent.EXTRA_TEXT, "Cea mai cool aplicatie")
-            type = "text/plain"
-        }
-        val shareIntent = Intent.createChooser(sendIntent,null)
-        shareIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
-        this.startActivity(shareIntent)
-    }
+
 
 }
