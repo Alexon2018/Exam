@@ -35,12 +35,12 @@ class ItemListAdapter(private val onItemClicked: (Item) -> Unit) :
     class ItemViewHolder(private var binding: ItemListItemBinding) :
         RecyclerView.ViewHolder(binding.root) {
 
+        // aici facem bind intre form/ item-ul din RV si model/DAO
         fun bind(item: Item) {
             binding.apply {
                 itemIntrebare.text = item.itemIntrebare
                 itemRaspuns1.text = item.itemRaspuns1
-//                itemPrice.text = item.getFormattedPrice()
-//                itemQuantity.text = item.quantityInStock.toString()
+                itemRaspuns2.text = item.itemRaspuns2
             }
         }
 

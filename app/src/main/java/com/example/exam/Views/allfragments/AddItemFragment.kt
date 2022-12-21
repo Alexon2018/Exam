@@ -39,31 +39,23 @@ class AddItemFragment : Fragment() {
         return binding.root
     }
 
-    private fun isEntryValid(): Boolean {
-        return viewModel.isEntryValid(
-            binding.itemIntrebare.text.toString(),
-            binding.itemRaspuns1.text.toString()
-//            binding.itemPrice.text.toString(),
-//            binding.itemCount.text.toString(),
-        )
-    }
-
+    // aici adaugam un nou Item, verificam daca e valid, apoi apelam add din viewModel cu parametrii din form; la final redirectam
     private fun addNewItem() {
         if (isEntryValid()) {
             viewModel.addNewItem(
                 binding.itemIntrebare.text.toString(),
                 binding.itemRaspuns1.text.toString(),
-//                binding.itemPrice.text.toString(),
-//                binding.itemCount.text.toString(),
+                binding.itemRaspuns2.text.toString()
             )
             val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
             findNavController().navigate(action)
         }
-        Log.i("BLABLA", "nu e valid")
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //aici verificam daca exista deja date (vine pt update), daca nu facem add
         val id = navigationArgs.itemId
         if (id > 0) {
             viewModel.retrieveItem(id).observe(this.viewLifecycleOwner) { selectedItem ->
@@ -77,30 +69,38 @@ class AddItemFragment : Fragment() {
         }
     }
 
+    // aici facem bind intre valoarea din model/Item de campul respectiv din formular, la final pornim updateItem
     private fun bind(item: Item) {
-//        val price = "%.2f".format(item.itemPrice)
         binding.apply {
             itemIntrebare.setText(item.itemIntrebare, TextView.BufferType.SPANNABLE)
             itemRaspuns1.setText(item.itemRaspuns1, TextView.BufferType.SPANNABLE)
-//            itemPrice.setText(price, TextView.BufferType.SPANNABLE)
-//            itemCount.setText(item.quantityInStock.toString(), TextView.BufferType.SPANNABLE)
+            itemRaspuns2.setText(item.itemRaspuns2, TextView.BufferType.SPANNABLE)
 
             saveAction.setOnClickListener { updateItem() }
         }
     }
 
+    // aici verificam daca este valid, apelam updateItm din viewmodel, la final facem tranzitia spre RV
     private fun updateItem() {
         if (isEntryValid()) {
             viewModel.updateItem(
                 this.navigationArgs.itemId,
                 this.binding.itemIntrebare.text.toString(),
-                this.binding.itemRaspuns1.text.toString()
-//                this.binding.itemPrice.text.toString(),
-//                this.binding.itemCount.text.toString()
+                this.binding.itemRaspuns1.text.toString(),
+                this.binding.itemRaspuns2.text.toString()
             )
             val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
             findNavController().navigate(action)
         }
+    }
+
+    //aici intoarcem un bool prin functia isEntryValid din viewModel cu parametrii proveniti din formular
+    private fun isEntryValid(): Boolean {
+        return viewModel.isEntryValid(
+            binding.itemIntrebare.text.toString(),
+            binding.itemRaspuns1.text.toString(),
+            binding.itemRaspuns2.text.toString()
+        )
     }
 
 }

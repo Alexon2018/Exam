@@ -31,15 +31,13 @@ class ItemDetailFragment : Fragment() {
     private var _binding: FragmentItemDetailBinding? = null
     private val binding get() = _binding!!
 
+    // aici facem bind intre campurile din form si model/Item
     private fun bind(item: Item) {
         binding.apply {
             itemIntrebare.text = item.itemIntrebare
             itemRaspuns1.text = item.itemRaspuns1
-//            itemPrice.text = item.getFormattedPrice()
-//            itemCount.text = item.quantityInStock.toString()
+            itemRaspuns2.text = item.itemRaspuns2
 
-//            sellItem.setOnClickListener { viewModel.sellItem(item) }
-//            sellItem.isEnabled = viewModel.isStockAvailable(item)
             deleteItem.setOnClickListener { showConfirmationDialog() }
             editItem.setOnClickListener { editItem() }
 
@@ -64,11 +62,13 @@ class ItemDetailFragment : Fragment() {
         }
     }
 
+    // aici facem delete
     private fun deleteItem() {
         viewModel.deleteItem(item)
         findNavController().navigateUp()
     }
 
+    // aici il intrebam daca e sigur
     private fun showConfirmationDialog() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(getString(R.string.atentie))
@@ -81,6 +81,7 @@ class ItemDetailFragment : Fragment() {
             .show()
     }
 
+    // aici facem edit / redirect in pagina de add prepopulata
     private fun editItem() {
         val action = ItemDetailFragmentDirections.actionItemDetailFragmentToAddItemFragment(
             getString(R.string.edit_fragment_title),
@@ -88,8 +89,5 @@ class ItemDetailFragment : Fragment() {
         )
         this.findNavController().navigate(action)
     }
-
-
-
 
 }

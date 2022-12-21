@@ -12,7 +12,9 @@ data class Item(
     @ColumnInfo(name = "intrebare")
     val itemIntrebare: String,
     @ColumnInfo(name = "raspuns1")
-    val itemRaspuns1: String
+    val itemRaspuns1: String,
+    @ColumnInfo(name = "raspuns2")
+    val itemRaspuns2: String
 //    @ColumnInfo(name = "price")
 //    val itemPrice: Double,
 //    @ColumnInfo(name = "quantity")
