@@ -11,7 +11,7 @@
         android:label="aboutFragment" />
     <fragment
         android:id="@+id/contactFragment"
-        android:name="com.example.exam.Views.allfragments.contactFragment"
+        android:name="com.example.exam.Views.allfragments.ContactFragment"
         android:label="contactFragment" />
     <fragment
         android:id="@+id/itemListFragment"
