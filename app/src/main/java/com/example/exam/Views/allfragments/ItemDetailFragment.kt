@@ -38,6 +38,7 @@ class ItemDetailFragment : Fragment() {
             itemCategoria.text = item.itemCategoria
             itemRaspuns1.text = item.itemRaspuns1
             itemRaspuns2.text = item.itemRaspuns2
+            itemBool1.text = item.itemBool1.toString()
 
             deleteItem.setOnClickListener { showConfirmationDialog() }
             editItem.setOnClickListener { editItem() }

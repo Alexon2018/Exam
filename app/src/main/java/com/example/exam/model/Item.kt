@@ -16,5 +16,7 @@ data class Item(
     @ColumnInfo(name = "raspuns1")
     val itemRaspuns1: String,
     @ColumnInfo(name = "raspuns2")
-    val itemRaspuns2: String
+    val itemRaspuns2: String,
+    @ColumnInfo(name = "bool1")
+    val itemBool1: Boolean
 )
