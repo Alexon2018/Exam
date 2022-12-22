@@ -48,7 +48,8 @@ class AddItemFragment : Fragment() {
                 binding.itemRaspuns1.text.toString(),
                 binding.itemRaspuns2.text.toString(),
                 binding.itemBool1.isChecked,
-                binding.itemBool2.isChecked
+                binding.itemBool2.isChecked,
+                binding.itemDate.text.toString()
             )
             val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
             findNavController().navigate(action)
@@ -81,7 +82,7 @@ class AddItemFragment : Fragment() {
             itemRaspuns2.setText(item.itemRaspuns2, TextView.BufferType.SPANNABLE)
             itemBool1.isChecked = item.itemBool1
             itemBool2.isChecked = item.itemBool2
-
+            itemDate.setText(item.itemDate, TextView.BufferType.SPANNABLE)
             saveAction.setOnClickListener { updateItem() }
         }
     }
@@ -96,7 +97,8 @@ class AddItemFragment : Fragment() {
                 this.binding.itemRaspuns1.text.toString(),
                 this.binding.itemRaspuns2.text.toString(),
                 this.binding.itemBool1.isChecked,
-                this.binding.itemBool2.isChecked
+                this.binding.itemBool2.isChecked,
+                this.binding.itemDate.text.toString()
             )
             val action = AddItemFragmentDirections.actionAddItemFragmentToItemListFragment()
             findNavController().navigate(action)
@@ -112,5 +114,6 @@ class AddItemFragment : Fragment() {
             binding.itemRaspuns2.text.toString()
         )
     }
+
 
 }

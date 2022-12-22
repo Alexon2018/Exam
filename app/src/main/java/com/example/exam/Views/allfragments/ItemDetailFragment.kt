@@ -56,10 +56,9 @@ class ItemDetailFragment : Fragment() {
             itemCategoria.text = item.itemCategoria
             itemRaspuns1.text = item.itemRaspuns1
             itemRaspuns2.text = item.itemRaspuns2
-//            itemBool1.text = item.itemBool1.toString()
-//            itemBool2.text = item.itemBool2.toString()
             itemCheckBox1.isChecked = item.itemBool1
             itemCheckBox2.isChecked = item.itemBool2
+            itemDate.text= item.itemDate
 
             deleteItem.setOnClickListener { showConfirmationDialog() }
             editItem.setOnClickListener { editItem() }

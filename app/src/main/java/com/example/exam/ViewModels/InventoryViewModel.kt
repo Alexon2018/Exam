@@ -4,6 +4,7 @@ import androidx.lifecycle.*
 import com.example.exam.model.Item
 import com.example.exam.model.ItemDao
 import kotlinx.coroutines.launch
+import java.util.Date
 
 class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
 
@@ -31,20 +32,21 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
     }
 
     //aici pregatim un nou entry, cu parametrii necesari, si intoarcem un obiect de tip model/Item
-    private fun getNewItemEntry(itemName: String, itemCategoria: String, itemRaspuns1: String, itemRaspuns2: String, itemBool1: Boolean, itemBool2: Boolean): Item {
+    private fun getNewItemEntry(itemName: String, itemCategoria: String, itemRaspuns1: String, itemRaspuns2: String, itemBool1: Boolean, itemBool2: Boolean, itemDate: String): Item {
         return Item(
             itemIntrebare = itemName,
             itemCategoria = itemCategoria,
             itemRaspuns1 = itemRaspuns1,
             itemRaspuns2 = itemRaspuns2,
             itemBool1 = itemBool1,
-            itemBool2 = itemBool2
+            itemBool2 = itemBool2,
+            itemDate = itemDate
         )
     }
 
     // aici construim functia de add, luam parametrii cu getNew si apoi apelam insert/corutina
-    fun addNewItem(itemName: String, itemCategoria : String, itemRaspuns1: String, itemRaspuns2: String, itemBool1: Boolean, itemBool2: Boolean) {
-        val newItem = getNewItemEntry(itemName, itemCategoria, itemRaspuns1, itemRaspuns2, itemBool1, itemBool2)
+    fun addNewItem(itemName: String, itemCategoria : String, itemRaspuns1: String, itemRaspuns2: String, itemBool1: Boolean, itemBool2: Boolean, itemDate: String) {
+        val newItem = getNewItemEntry(itemName, itemCategoria, itemRaspuns1, itemRaspuns2, itemBool1, itemBool2, itemDate)
         insertItem(newItem)
     }
 
@@ -69,7 +71,8 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         itemRaspuns1: String,
         itemRaspuns2: String,
         itemBool1: Boolean,
-        itemBool2: Boolean
+        itemBool2: Boolean,
+        itemDate: String
     ): Item {
         return Item(
             id = itemId,
@@ -78,7 +81,8 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
             itemRaspuns1 = itemRaspuns1,
             itemRaspuns2 = itemRaspuns2,
             itemBool1 = itemBool1,
-            itemBool2 = itemBool2
+            itemBool2 = itemBool2,
+            itemDate = itemDate
         )
     }
 
@@ -90,10 +94,11 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         itemRaspuns1 : String,
         itemRaspuns2 : String,
         itemBool1 : Boolean,
-        itemBool2 : Boolean
+        itemBool2 : Boolean,
+        itemDate: String
 
     ) {
-        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemCategoria, itemRaspuns1, itemRaspuns2, itemBool1, itemBool2)
+        val updatedItem = getUpdatedItemEntry(itemId, itemName, itemCategoria, itemRaspuns1, itemRaspuns2, itemBool1, itemBool2, itemDate)
         updateItem(updatedItem)
     }
 
