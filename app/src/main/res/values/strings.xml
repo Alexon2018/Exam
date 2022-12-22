@@ -52,4 +52,8 @@
 
     <string name="phoneNumber">0311302903</string>
 
+    <string name="donaldduck">Sir Donald Duck</string>
+    <string name="ddemail">dd@gmail.com</string>
+
+
 </resources>
