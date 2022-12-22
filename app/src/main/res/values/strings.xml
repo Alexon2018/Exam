@@ -50,6 +50,9 @@
     <string name="contact">Contact</string>
     <string name="categoria">Categoria:</string>
     <string name="date">Data</string>
+    <string name="CategRV">Categoria:</string>
+
+    <string name="aboutMe">Despre noi</string>
 
 
 </resources>

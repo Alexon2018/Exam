@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.bumptech.glide.Glide
 import com.example.exam.R
@@ -37,6 +38,9 @@ class AboutFragment : Fragment() {
         binding.shareButton.setOnClickListener {
             startSharing()
         }
+
+        // aici setam titlul paginii
+        (activity as AppCompatActivity).supportActionBar?.title = getString(R.string.aboutMe)
 
     }
 
