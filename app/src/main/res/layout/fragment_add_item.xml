@@ -14,7 +14,10 @@
             android:id="@+id/item_intrebare_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/margin"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
             android:hint="@string/item_intrebare"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +28,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:inputType="textAutoComplete|textCapWords"
-                android:singleLine="true" />
+                android:fontFamily="sans-serif-condensed-light"
+                android:textSize="24sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/item_categoria_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:hint="@string/item_categoria"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -43,14 +49,17 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:inputType="textAutoComplete|textCapWords"
-                android:singleLine="true" />
+                android:fontFamily="sans-serif-condensed-light"
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/item_raspuns1_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:hint="@string/item_raspuns1"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -61,8 +70,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:inputType="textAutoComplete|textCapWords"
-                android:singleLine="true" />
+                android:fontFamily="sans-serif-condensed-light"
+                android:textSize="18sp" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
@@ -70,6 +79,7 @@
             android:id="@+id/item_bool1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_weight="1"
             app:layout_constraintBottom_toBottomOf="@+id/item_raspuns1_label"
             app:layout_constraintEnd_toEndOf="@+id/item_raspuns1_label"
@@ -79,6 +89,9 @@
             android:id="@+id/item_raspuns2_label"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
             android:hint="@string/item_raspuns2"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,8 +102,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@color/white"
-                android:inputType="textAutoComplete|textCapWords"
-                android:singleLine="true" />
+                android:fontFamily="sans-serif-condensed-light"
+                android:textSize="18sp" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <Switch
@@ -107,7 +120,9 @@
             android:id="@+id/save_action"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="24dp"
             android:background="@drawable/rounded_button"
             android:text="@string/save_action"
             app:layout_constraintEnd_toEndOf="parent"

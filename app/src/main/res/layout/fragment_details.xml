@@ -13,9 +13,9 @@
             android:id="@+id/id1Q"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
+            android:layout_marginStart="24dp"
             android:layout_marginTop="48dp"
-            android:layout_marginEnd="20dp"
+            android:layout_marginEnd="24dp"
             android:ellipsize="end"
             android:fontFamily="serif"
             android:text="Aici vine intrebarea cu multe optiuni"
@@ -28,11 +28,20 @@
             android:id="@+id/idCat"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="24dp"
             android:text="Categoria"
             app:layout_constraintEnd_toStartOf="@+id/idDate"
             app:layout_constraintStart_toStartOf="@+id/id1Q"
             app:layout_constraintTop_toBottomOf="@+id/id1Q" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="24dp"
+            android:background="#CCCCCC"
+            app:layout_constraintTop_toBottomOf="@+id/idCat" />
+
 
         <TextView
             android:id="@+id/idDate"
@@ -49,12 +58,13 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="28dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="24dp"
             android:ellipsize="end"
             android:text="Raspuns 1"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/idB1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/idCat" />
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
 
         <Switch
             android:id="@+id/idB1"
@@ -73,6 +83,7 @@
             android:layout_marginTop="24dp"
             android:ellipsize="end"
             android:text="Raspuns 2"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/idB1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/idR1" />
@@ -94,6 +105,7 @@
             android:layout_marginTop="24dp"
             android:ellipsize="end"
             android:text="Raspuns 3"
+            android:textSize="18sp"
             app:layout_constraintEnd_toStartOf="@+id/idB1"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/idR2" />
