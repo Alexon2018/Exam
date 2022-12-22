@@ -71,6 +71,29 @@ class AddItemFragment : Fragment() {
                 addNewItem()
             }
         }
+
+
+        //aici luam data selectat: instantiem DatePickerFragment, supportFragManaager, show
+        binding.apply {
+            dateButton.setOnClickListener {
+
+                val datePickerFragment = DatePickerFragment()
+                val supportFragmentManager = requireActivity().supportFragmentManager
+
+                supportFragmentManager.setFragmentResultListener(
+                    "REQUEST_KEY",
+                    viewLifecycleOwner
+                ) { resultKey, bundle ->
+                    if (resultKey == "REQUEST_KEY") {
+                        val date = bundle.getString("SELECTED_DATE")
+                        itemDate.text= date
+                    }
+                }
+                // show
+                datePickerFragment.show(supportFragmentManager, "DatePickerFragment")
+            }
+        }
+
     }
 
     // aici facem bind intre valoarea din model/Item de campul respectiv din formular, la final pornim updateItem
