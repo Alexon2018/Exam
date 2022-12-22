@@ -31,22 +31,6 @@ class ItemDetailFragment : Fragment() {
     private var _binding: FragmentItemDetailBinding? = null
     private val binding get() = _binding!!
 
-    // aici facem bind intre campurile din form si model/Item
-    private fun bind(item: Item) {
-        binding.apply {
-            itemIntrebare.text = item.itemIntrebare
-            itemCategoria.text = item.itemCategoria
-            itemRaspuns1.text = item.itemRaspuns1
-            itemRaspuns2.text = item.itemRaspuns2
-            itemBool1.text = item.itemBool1.toString()
-            itemBool2.text = item.itemBool2.toString()
-
-            deleteItem.setOnClickListener { showConfirmationDialog() }
-            editItem.setOnClickListener { editItem() }
-
-        }
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -62,6 +46,24 @@ class ItemDetailFragment : Fragment() {
         viewModel.retrieveItem(id).observe(this.viewLifecycleOwner) { selectedItem ->
             item = selectedItem
             bind(item)
+        }
+    }
+
+    // aici facem bind intre campurile din form si model/Item
+    private fun bind(item: Item) {
+        binding.apply {
+            itemIntrebare.text = item.itemIntrebare
+            itemCategoria.text = item.itemCategoria
+            itemRaspuns1.text = item.itemRaspuns1
+            itemRaspuns2.text = item.itemRaspuns2
+//            itemBool1.text = item.itemBool1.toString()
+//            itemBool2.text = item.itemBool2.toString()
+            itemCheckBox1.isChecked = item.itemBool1
+            itemCheckBox2.isChecked = item.itemBool2
+
+            deleteItem.setOnClickListener { showConfirmationDialog() }
+            editItem.setOnClickListener { editItem() }
+
         }
     }
 
