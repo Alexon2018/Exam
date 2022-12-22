@@ -1,4 +1,4 @@
-package com.example.exam
+package com.example.exam.Views.allfragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.exam.R
 import com.example.exam.ViewModels.InventoryViewModel
 import com.example.exam.ViewModels.InventoryViewModelFactory
 import com.example.exam.databinding.FragmentItemListBinding

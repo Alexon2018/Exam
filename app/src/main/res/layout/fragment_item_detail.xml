@@ -36,8 +36,8 @@
 
         <TextView
             android:id="@+id/item_raspuns1"
-            style="@style/Widget.Inventory.TextView"
             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="sans-serif-condensed-light"
             android:text="Raspuns 1"
@@ -47,7 +47,7 @@
 
         <TextView
             android:id="@+id/item_raspuns2"
-            style="@style/Widget.Inventory.TextView"
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginTop="20dp"
             android:fontFamily="sans-serif-condensed-light"
@@ -68,7 +68,7 @@
 
         <TextView
             android:id="@+id/item_categoria_label"
-            style="@style/Widget.Inventory.TextView"
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="sans-serif-condensed-light"
@@ -80,7 +80,7 @@
 
         <TextView
             android:id="@+id/item_categoria"
-            style="@style/Widget.Inventory.TextView"
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="24dp"
@@ -136,7 +136,7 @@
 
         <TextView
             android:id="@+id/item_date"
-            style="@style/Widget.Inventory.TextView"
+            android:layout_height="wrap_content"
             android:layout_width="wrap_content"
             android:layout_marginTop="24dp"
             android:fontFamily="sans-serif-condensed-light"
