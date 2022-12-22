@@ -73,7 +73,7 @@ class AddItemFragment : Fragment() {
         }
 
 
-        //aici luam data selectat: instantiem DatePickerFragment, supportFragManaager, show
+        //aici luam data selectata: instantiem DatePickerFragment, supportFragManaager, show
         binding.apply {
             dateButton.setOnClickListener {
 

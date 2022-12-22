@@ -19,7 +19,6 @@
     <string name="idAdresa">ADRESA: TIMISOARA\nStr. Dorobantilor, nr. 3</string>
     <string name="idTelefon">TELEFON: 0311.302.903</string>
 
-
     <string name="item_intrebare">Intrebarea ta este: <font color='#FF0000'>*</font></string>
     <string name="item_categoria">Categoria <font color='#FF0000'>*</font></string>
     <string name="item_raspuns1">Raspunsul numarul 1: <font color='#FF0000'>*</font></string>

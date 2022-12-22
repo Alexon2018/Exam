@@ -63,7 +63,7 @@ class InventoryViewModel(private val itemDao: ItemDao) : ViewModel() {
         return itemDao.getItem(id).asLiveData()
     }
 
-    // aici intoarcem un obiect de tip Item, pentru update
+    // aici intoarcem un obiect de tip Item, dupa update
     private fun getUpdatedItemEntry(
         itemId: Int,
         itemName: String,
