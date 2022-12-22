@@ -106,6 +106,7 @@ class AddItemFragment : Fragment() {
             itemBool1.isChecked = item.itemBool1
             itemBool2.isChecked = item.itemBool2
             itemDate.setText(item.itemDate, TextView.BufferType.SPANNABLE)
+
             saveAction.setOnClickListener { updateItem() }
         }
     }
